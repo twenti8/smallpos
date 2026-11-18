@@ -1,0 +1,6 @@
+{
+  "name": "finedaevibe POS",
+  "description": "ระบบจัดการหน้าร้าน POS พร้อมออกใบเสร็จอัตโนมัติ เชื่อมต่อ Google Sheets และแบ่งสิทธิ์พนักงาน",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

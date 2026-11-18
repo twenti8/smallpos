@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --pos-bg: #eef4fb;
+    --pos-surface: #ffffff;
+    --pos-surface-soft: #f8fbff;
+    --pos-nav-bg: #f2f7fd;
+    --pos-border: #dce8f7;
+    --pos-ink: #1e3554;
+    --pos-muted: #647b99;
+    --pos-accent: #3a78cc;
+    --pos-accent-hover: #2c66b5;
+    --pos-accent-soft: #f2f7fe;
+    --pos-accent-on: #ffffff;
+    --pos-accent-text: #3a78cc;
+  }
+
+  body {
+    font-family: 'Mali', system-ui, -apple-system, sans-serif;
+    background-color: var(--pos-bg);
+    color: var(--pos-ink);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+}
+
+.pos-canvas {
+  background-color: var(--pos-bg);
+  color: var(--pos-ink);
+}
+
+.pos-card {
+  background-color: var(--pos-surface);
+  border-color: var(--pos-border);
+  color: var(--pos-ink);
+}
+
+.pos-surface-soft {
+  background-color: var(--pos-surface-soft);
+  border-color: var(--pos-border);
+  color: var(--pos-ink);
+}
+
+.pos-nav-shell {
+  background-color: var(--pos-nav-bg);
+  border-color: var(--pos-border);
+}
+
+.pos-input {
+  background-color: var(--pos-surface-soft);
+  border-color: var(--pos-border);
+  color: var(--pos-ink);
+}
+
+.pos-input::placeholder {
+  color: var(--pos-muted);
+  opacity: 0.72;
+}
+
+.pos-btn-primary {
+  background-color: var(--pos-accent);
+  color: var(--pos-accent-on);
+}
+
+.pos-btn-primary:hover:not(:disabled) {
+  background-color: var(--pos-accent-hover);
+}
+
+.pos-btn-secondary {
+  background-color: var(--pos-surface-soft);
+  border-color: var(--pos-border);
+  color: var(--pos-accent-text);
+}
+
+.pos-btn-secondary:hover:not(:disabled) {
+  background-color: var(--pos-accent-soft);
+}
+
+.pos-ink {
+  color: var(--pos-ink);
+}
+
+.pos-muted {
+  color: var(--pos-muted);
+}
+
+.pos-accent-text {
+  color: var(--pos-accent-text);
+}
+
+.pos-accent-soft {
+  background-color: var(--pos-accent-soft);
+  border-color: var(--pos-accent-text);
+}
+
+.pos-border {
+  border-color: var(--pos-border);
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #receipt-print-area,
+  #receipt-print-area * {
+    visibility: visible !important;
+  }
+
+  #receipt-print-area {
+    position: fixed !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translateX(-50%) !important;
+    width: 80mm !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #1e3554 !important;
+  }
+}
